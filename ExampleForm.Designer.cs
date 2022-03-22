@@ -28,26 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.ExecuteButton = new System.Windows.Forms.Button();
+            this.FlowList = new System.Windows.Forms.ListBox();
+            this.StopButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // ExecuteButton
             // 
-            this.button1.Location = new System.Drawing.Point(22, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ExecuteButton.Location = new System.Drawing.Point(165, 338);
+            this.ExecuteButton.Name = "ExecuteButton";
+            this.ExecuteButton.Size = new System.Drawing.Size(143, 47);
+            this.ExecuteButton.TabIndex = 0;
+            this.ExecuteButton.Text = "运行";
+            this.ExecuteButton.UseVisualStyleBackColor = true;
+            this.ExecuteButton.Click += new System.EventHandler(this.Execute_Click);
             // 
-            // Form1
+            // FlowList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.FlowList.FormattingEnabled = true;
+            this.FlowList.ItemHeight = 14;
+            this.FlowList.Location = new System.Drawing.Point(14, 14);
+            this.FlowList.Name = "FlowList";
+            this.FlowList.Size = new System.Drawing.Size(652, 298);
+            this.FlowList.TabIndex = 1;
+            // 
+            // StopButton
+            // 
+            this.StopButton.Location = new System.Drawing.Point(384, 338);
+            this.StopButton.Name = "StopButton";
+            this.StopButton.Size = new System.Drawing.Size(143, 47);
+            this.StopButton.TabIndex = 0;
+            this.StopButton.Text = "停止";
+            this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.Click += new System.EventHandler(this.Stop_Click);
+            // 
+            // ExampleForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(678, 413);
+            this.Controls.Add(this.FlowList);
+            this.Controls.Add(this.StopButton);
+            this.Controls.Add(this.ExecuteButton);
+            this.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Name = "ExampleForm";
+            this.Text = "示例程序";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExampleForm_Closing);
             this.Load += new System.EventHandler(this.ExampleForm_Load);
             this.ResumeLayout(false);
 
@@ -55,7 +81,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ExecuteButton;
+        private System.Windows.Forms.ListBox FlowList;
+        private System.Windows.Forms.Button StopButton;
     }
 }
 
